@@ -1,3 +1,52 @@
 /*--------------------------------------------------------------
 # Embedded Fonts
 --------------------------------------------------------------*/
+@font-face {
+  font-family: 'Open-Sans';
+  src:url('../../fonts/OpenSans-Bold.ttf');
+  font-style: normal;
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'Open-Sans';
+  src:url('../../fonts/OpenSans-Light.ttf');
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'Open-Sans';
+  src:url('../../fonts/OpenSans-BoldItalic.ttf');
+  font-style: italic;
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'Open-Sans';
+  src:url('../../fonts/OpenSans-LightItalic.ttf');
+  font-style: italic;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Overlock';
+  src:url('../../fonts/Overlock-Bold.ttf');
+  font-style: normal;
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'Overlock';
+  src:url('../../fonts/Overlock-Regular.ttf');
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'Overlock';
+  src:url('../../fonts/Overlock-BoldItalic.ttf');
+  font-style: italic;
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'Overlock';
+  src:url('../../fonts/Overlock-LightItalic.ttf');
+  font-style: italic;
+  font-weight: normal;
+}
