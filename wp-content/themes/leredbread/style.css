@@ -1280,3 +1280,45 @@ body:not(.home):not(.page-template-about):not(.post-type-archive-product) .widge
       .taxonomy-product .taxonomy-product-desc h2 a {
         text-decoration: none;
         color: #db272a; }
+
+/* Post Page*/
+.post.type-post.hentry .entry-title {
+  color: #db272a; }
+
+.post.type-post.hentry .entry-meta a {
+  color: #db272a; }
+
+.post.type-post.hentry .cat-links a, .post.type-post.hentry .tags-links a {
+  color: #db272a;
+  text-decoration: none; }
+
+.comment-form {
+  display: block; }
+  .comment-form p {
+    font-weight: bold;
+    color: grey; }
+  .comment-form .require {
+    color: #db272a; }
+  .comment-form input, .comment-form textarea {
+    color: #666;
+    background-color: #fafafa;
+    border: 1px solid #e1e1e1;
+    border-radius: 3px;
+    margin-top: 5px; }
+  .comment-form .comment-form-author {
+    margin-right: 1%;
+    width: 49%;
+    float: left; }
+    .comment-form .comment-form-author input {
+      width: 100%; }
+  .comment-form .comment-form-email {
+    margin-left: 1%;
+    width: 49%;
+    float: left; }
+    .comment-form .comment-form-email input {
+      width: 100%; }
+  .comment-form .comment-form-url {
+    clear: left;
+    width: 100%; }
+    .comment-form .comment-form-url input {
+      width: 100%; }

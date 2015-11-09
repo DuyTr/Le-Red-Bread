@@ -581,3 +581,61 @@ body:not(.home):not(.page-template-about):not(.post-type-archive-product) .widge
     }
   }
 }
+
+/* Post Page*/
+.post.type-post.hentry{
+  .entry-title{
+    color: $color_red-brand;
+  }
+  .entry-meta a{
+    color: $color_red-brand;
+  }
+  .cat-links a, .tags-links a{
+    color: $color_red-brand;
+    text-decoration: none;
+  }
+
+}
+
+.comment-form{
+  display: block;
+  p{
+    font-weight: bold;
+    color: grey;
+  }
+  .require{
+    color: $color_red-brand;
+  }
+  input,textarea{
+    color: #666;
+    background-color: $color_second-background;
+    border: 1px solid $color_border;
+    border-radius: 3px;
+    margin-top: 5px;
+  }
+  .comment-form-author{
+    margin-right: 1%;
+    width: 49%;
+    float: left;
+    input{
+      width: 100%;
+    }
+  }
+  .comment-form-email{
+    margin-left: 1%;
+    width: 49%;
+    float:left;
+    input{
+      width: 100%;
+    }
+  }
+  .comment-form-url{
+    clear: left;
+    width: 100%;
+    input{
+      width: 100%;
+    }
+  }
+
+  
+}
