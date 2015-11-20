@@ -795,6 +795,10 @@ body:not(.home) .site-content {
     display: inline-block;
     text-align: right; }
 
+.current-menu-item {
+  border-bottom: 4px solid #db272a;
+  padding-bottom: 1px; }
+
 .search-form fieldset {
   width: 100%;
   border: none; }
@@ -1043,7 +1047,8 @@ body:not(.home) .site-content {
 
 .reviewer-name {
   font-weight: bold;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  margin-top: 1rem; }
 
 .reviewer-info {
   margin-top: .4rem; }

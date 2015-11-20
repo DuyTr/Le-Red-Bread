@@ -74,6 +74,8 @@ body:not(.home){
         color: $color_brown-brand;
       }
     }
+
+
     li:last-child{
       border-right: 0.1em solid $color_border;
     }
@@ -85,6 +87,10 @@ body:not(.home){
   }
 }
 
+.current-menu-item{
+    border-bottom: 4px solid $color_red-brand;
+    padding-bottom:1px;
+}
 
 
 .search-form fieldset{
@@ -327,6 +333,7 @@ body:not(.home){
 .reviewer-name{
   font-weight: bold;
   margin-bottom: 0;
+  margin-top: 1rem;
 }
 .reviewer-info{
   margin-top: .4rem;
@@ -637,5 +644,4 @@ body:not(.home):not(.page-template-about):not(.post-type-archive-product) .widge
     }
   }
 
-  
 }

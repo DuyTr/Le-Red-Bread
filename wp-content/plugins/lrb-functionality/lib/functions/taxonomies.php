@@ -35,6 +35,7 @@ function lrb_register_product_type_taxonomy() {
 		'show_admin_column'          => true,
 		'show_in_nav_menus'          => true,
 		'show_tagcloud'              => false,
+		'has_archive'								 => 'products',
 	);
 	register_taxonomy( 'product-type', array( 'product' ), $args );
 

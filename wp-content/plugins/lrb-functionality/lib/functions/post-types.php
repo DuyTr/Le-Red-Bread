@@ -49,7 +49,7 @@ function lrb_create_product() {
 add_action( 'init', 'lrb_create_product', 0 );
 
 function lrb_create_testimonial() {
-
+	
 	$labels = array(
 		'name'                => 'Testimonials',
 		'singular_name'       => 'Testimonial',
@@ -76,7 +76,7 @@ function lrb_create_testimonial() {
 		'show_ui'             => true,
 		'show_in_menu'        => true,
 		'menu_position'       => 5,
-		'menu_icon'           => 'dashicons-admin-comments',
+		'menu_icon'           => 'dashicons-megaphone',
 		'show_in_admin_bar'   => true,
 		'show_in_nav_menus'   => true,
 		'can_export'          => true,

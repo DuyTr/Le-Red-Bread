@@ -58,59 +58,24 @@ get_header(); ?>
 				<h2>what others say about us</h2>
 				<hr class="decorative">
 				<ul>
-					<li>
-						<img src="<?php echo get_template_directory_uri(); ?>/images/dr-dosist-headshot.png" alt="Dr. Dosist Headshot" />
-						<div class="review-content">
-							<p>
-								Healthy food be damned! If you are a bakery and sweet addict like myself this place is life changing. So many goodies. Have a cheat day and eat all the pretzels!
-							</p>
-							<p class="reviewer-name">
-								Dr. Dosist
-							</p>
-							<p class="reviewer-info">
-								Nutritionist – <a href="#">Health Time Clinic</a>
-							</p>
-						</div>
-					</li>
-					<li>
-						<img src="<?php echo get_template_directory_uri(); ?>/images/maxi-milli-headshot.png" alt="Maxi Milli Headshot" />
-						<div class="review-content">
-							<p>
-								Do you like bread? Seriously, who doesn’t? You have to check Le Red Bread’s lovely loaves. Fresh flavours every day…need I say more?							</p>
-							<p class="reviewer-name">
-								Maxi Milli
-							</p>
-							<p class="reviewer-info">
-								Chef – <a href="#">Sailor Spoon</a>
-							</p>
-						</div>
-					</li>
-					<li>
-						<img src="<?php echo get_template_directory_uri(); ?>/images/ana-vandana-headshot.png" alt="Ana Vandana Headshot" />
-						<div class="review-content">
-							<p>
-								Excellent cookies! They always have unique flavours and the cookies are always super fresh. Make sure you get them before they sell out! And keep an eye out on holidays, the flavour combinations they come up with are brilliant. Delicious!							</p>
-							<p class="reviewer-name">
-								Anna Vandana
-							</p>
-							<p class="reviewer-info">
-								Author - <a href="#">Food Is Great Magazine</a>
-							</p>
-						</div>
-					</li>
-					<li>
-						<img src="<?php echo get_template_directory_uri(); ?>/images/martha-m-masters-headshot.png" alt="Martha M. Masters Headshot" />
-						<div class="review-content">
-							<p>
-								Where has this bakery been all my life! I absolutely love their cookies and muffins. Nom nom.							</p>
-							<p class="reviewer-name">
-								Martha M. Masters
-							</p>
-							<p class="reviewer-info">
-								Food Critic – <a href="#">WikiTravel</a>
-							</p>
-						</div>
-					</li>
+					<?php
+						$args = array( 'posts_per_page' => 4, 'post_type' => 'testimonial');
+						$myposts = get_posts( $args );
+						foreach ( $myposts as $post ) : setup_postdata( $post );
+					?>
+					  <li>
+								<?php  echo wp_get_attachment_image( CFS()->get('headshot') ,array(100,100)); ?>
+								<div class="review-content">
+									<?php echo CFS()->get('content'); ?>
+									<p class="reviewer-name"><?php the_title(); ?></p>
+									<p class="reviewer-info">
+										<?php echo CFS()->get('job_title'); ?> - <?php echo CFS()->get('company'); ?>
+									</p>
+								</div>
+						</li>
+					<?php endforeach;
+					wp_reset_postdata();?>
+
 				</ul>
 			</section>
 		</main>
