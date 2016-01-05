@@ -19,6 +19,14 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-summary">
-		<?php the_excerpt(); ?>
+		<?php if ( 'testimonial' === get_post_type() ) : ?>
+			<p><?php echo wp_trim_words( CFS()->get( 'content' ), 50, ' [...]' ); ?></p>
+			<p><a href="<?php the_permalink(); ?>" class="read-more">Read more &rarr;</a></p>
+		<?php elseif ( 'page' === get_post_type() && 'about' === get_post_field( 'post_name', get_the_ID() ) ) : ?>
+			<p><?php echo wp_trim_words( CFS()->get( 'team_story' ), 50, ' [...]' ); ?></p>
+			<p><a href="<?php the_permalink(); ?>" class="read-more">Read more &rarr;</a></p>
+		<?php else : ?>
+			<?php the_excerpt(); ?>
+		<?php endif; ?>
 	</div><!-- .entry-summary -->
 </article><!-- #post-## -->

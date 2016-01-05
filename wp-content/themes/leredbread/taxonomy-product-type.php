@@ -2,8 +2,12 @@
 <?php get_header(); ?>
 <div id="primary" class="content-area">
 	<main id="main" class="site-main" role="main">
-
+		<div class="">
+			<?php the_archive_title ('<h1>','</h1>'); ?>
+			<?php the_archive_description('<p>','</p>'); ?>
+		</div>
     <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+
         <div class="taxonomy-product">
           <?php the_post_thumbnail('thumbnail'); ?>
           <div class="taxonomy-product-desc">

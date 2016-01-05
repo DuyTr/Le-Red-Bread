@@ -42,7 +42,9 @@ get_header(); ?>
 					$myposts = get_posts( $args );
 					foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
 						<li class="latest-new-item">
-							<?php the_post_thumbnail(); ?>
+							<div class="latest-new-img-wrapper">
+								<?php the_post_thumbnail(); ?>
+							</div>
 							<div class="latest-new-footer">
 							<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 							<span class="latest-new-meta">

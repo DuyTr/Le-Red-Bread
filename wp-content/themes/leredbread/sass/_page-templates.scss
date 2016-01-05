@@ -7,143 +7,8 @@ body:not(.home){
   }
 }
 
-/* Header */
-.site-header{
-  padding-top: 35px;
-  background:$color_second-background;
-}
-
-
-.site-branding{
-    width: 100%;
-    border-top: .1em solid $color_border;
-    border-bottom: .1em solid $color_border;
-    background: $color_background;
-}
-
-
-.site-branding-inner{
-  @include container;
-  padding: 25px 0;
-
-  display:flex;
-  justify-content: space-between;
-  .logo-wrapper{
-    width: 30%;
-    .main-logo img{
-      width: 89%;
-    }
-  }
-  .fa-icon{
-    width: 30%;
-    display: flex;
-    justify-content:flex-end;
-    align-items: center;
-    .fa{
-      padding: 0 15px;
-      color: grey;
-    }
-  }
-}
-
-.main-navigation{
-  box-shadow: 0 2px 3px 0 rgba(150,150,150,.25);
-  background: $color_background;
-}
-
-.inner-main-navigation{
-  display:flex;
-  @include container;
-  justify-content: space-between;
-  .menu-menu-1-container{
-    width:50%;
-    box-sizing:border-box;
-    li{
-      padding: 10px 0;
-      width:20%;
-      border-left: 0.1em solid $color_border;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      a{
-        font-weight: 700;
-        text-decoration: none;
-        color: grey;
-      }
-      a:hover{
-        color: $color_brown-brand;
-      }
-    }
-
-
-    li:last-child{
-      border-right: 0.1em solid $color_border;
-    }
-  }
-  .search-form{
-    width: 30%;
-    display:inline-block;
-    text-align:right;
-  }
-}
-
-.current-menu-item{
-    border-bottom: 4px solid $color_red-brand;
-    padding-bottom:1px;
-}
-
-
-.search-form fieldset{
-  width: 100%;
-  border: none;
-
-  label{
-    width: 85%;
-    .search-field{
-    border: none;
-    }
-  }
-  .search-submit{
-    width: 10%;
-    border: none;
-    background: white;
-    box-shadow:none;
-  }
-}
-
-
-/* Footer*/
-.site-footer{
-  background: $color_font-footer;
-  .main-footer{
-    @include container;
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-    padding: 2.5rem 0;
-    h3{
-      margin-bottom: 0.5rem;
-      color: $color_light-grey-brand;
-    }
-    p{
-      margin: 0 0 0.5rem;
-      color: white;
-    }
-  }
-  .copyright-footer{
-    background: $color_footer2;
-    font-size: 0.8rem;
-    width: 100%;
-    padding: 3px 0;
-    text-align:center;
-  }
-}
-
-.logo-footer{
-  text-align: center;
-  img{
-    width: 50%;
-  }
+body{
+  font-size:16px;
 }
 
 
@@ -164,6 +29,7 @@ body:not(.home){
   font-size: 6rem;
   color: white;
   text-transform: uppercase;
+  text-shadow: rgba(100, 100, 100, 0.74902) 3px 2px 3px;
 }
 
 .product-container{
@@ -235,32 +101,23 @@ body:not(.home){
   }
 }
 
-.decorative{
-  border: none;
-  color: $color_border;
-  margin-bottom: 2rem;
-  max-width: 320px;
-  padding: 0;
-  width: 50%;
-  text-align: center;
-  &::after{
-    background: 0 0;
-    content: '\f111';
-    display: inline-block;
-    font-family: FontAwesome;
-    font-size: 14.4px;
-    font-size: .9rem;
-    position: relative;
-    top: -.875em;
-  }
-}
+
 
 .latest-new-item{
   width: 25%;
   border: 1px solid #e1e1e1;
-  img{
-    overflown: hidden;
+  .latest-new-img-wrapper{
     height: 200px;
+    overflow: hidden;
+    position: relative;
+    img{
+      height: auto;
+      left: 50%;
+      max-width: none;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%,-50%);
+    }
   }
   .latest-new-footer{
     margin: 8px 7px;
@@ -361,6 +218,21 @@ body:not(.home){
   }
   .right-side{
     width: 47%;
+  }
+  h3{
+    font-size: 1.6rem;
+    margin-bottom: 0;
+  }
+  .sub-head{
+    margin-top: 0;
+    color: $color_light-grey-brand;
+  }
+}
+
+.team-story{
+  h3{
+    font-size: 1.6rem;
+    text-align: center;
   }
 }
 
@@ -566,7 +438,7 @@ body:not(.home):not(.page-template-about):not(.post-type-archive-product) .widge
   }
 }
 
-/* taxonomy-product-type*/
+/* taxonomy-product-type page*/
 .taxonomy-product{
   display: flex;
   flex-flow: row wrap;
@@ -592,7 +464,7 @@ body:not(.home):not(.page-template-about):not(.post-type-archive-product) .widge
 /* Post Page*/
 .post.type-post.hentry{
   .entry-title{
-    color: $color_red-brand;
+    color: #222;
   }
   .entry-meta a{
     color: $color_red-brand;
@@ -601,47 +473,78 @@ body:not(.home):not(.page-template-about):not(.post-type-archive-product) .widge
     color: $color_red-brand;
     text-decoration: none;
   }
-
+  .tags-links{
+    padding-left: 30px;
+  }
+  .decorative{
+    margin-top: 50px;
+  }
 }
 
-.comment-form{
-  display: block;
-  p{
-    font-weight: bold;
-    color: grey;
-  }
-  .require{
-    color: $color_red-brand;
-  }
-  input,textarea{
-    color: #666;
-    background-color: $color_second-background;
-    border: 1px solid $color_border;
-    border-radius: 3px;
-    margin-top: 5px;
-  }
-  .comment-form-author{
-    margin-right: 1%;
-    width: 49%;
-    float: left;
-    input{
-      width: 100%;
+/*No result Page*/
+.no-results,.not-found{
+  border-top: 1px dashed $color_light-grey-brand;
+  .search-form fieldset{
+    padding-left:0;
+    label{
+      box-sizing: content-box;
+      display: block;
+      margin-bottom:10px;
+      input{
+        color: #222;
+        background-color: #fafafa;
+        border: 1px solid $color_light-grey-brand;
+        border-radius: 3px;
+        font-weight: bold;
+      }
+    }
+    .search-submit{
+      border: none;
+      border-radius: 3px;
+      background: #400c0d;
+      color: #fff;
+      cursor: pointer;
+      line-height: 1;
+      padding: .75rem 1.5rem;
+      text-decoration: none;
+      box-shadow:none;
     }
   }
-  .comment-form-email{
-    margin-left: 1%;
-    width: 49%;
-    float:left;
-    input{
-      width: 100%;
-    }
-  }
-  .comment-form-url{
-    clear: left;
-    width: 100%;
-    input{
-      width: 100%;
-    }
-  }
+}
 
+/* Search Result Page*/
+.search-results{
+  .testimonial{
+    text-align: left;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  h2 a,.read-more{
+    color: $color_red-brand;
+    text-decoration: none;
+  }
+}
+
+/* 404 Page*/
+.error404{
+  .search-form fieldset{
+    padding-left: 0;
+    label{
+      display: inline-block;
+    }
+  }
+  .widget{
+    h2{
+      color: $color_medium-grey-brand;
+    }
+    ul{
+      list-style: none;
+      margin-left: 0;
+      padding-left: 0;
+      a{
+        text-decoration: none;
+        color: $color_red-brand;
+      }
+    }
+  }
 }

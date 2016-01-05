@@ -8,14 +8,14 @@
 get_header(); ?>
 <div id="primary" class="content-area">
 	<main id="main" class="site-main" role="main">
-		<header class="about-page-header">
+		<div class="about-page-header">
 			<?php
 				the_title( '<h1 class="about-page-title">', '</h1>' );
 			?>
 			<div class="team-motto">
 				<?php echo  CFS()->get('team_motto'); ?>
 			</div>
-		</header>
+		</div>
 		<hr class="decorative">
 		<div class="leftright-wrapper">
 			<div class="left-side">
